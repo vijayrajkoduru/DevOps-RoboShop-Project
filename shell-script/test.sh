@@ -13,7 +13,7 @@ else
 
 fi
 
-dnf list install mysql
+dnf list remove mysql
 if [ $? -ne 0 ]
 then 
     echo "mysql is not installed ...going to install"
