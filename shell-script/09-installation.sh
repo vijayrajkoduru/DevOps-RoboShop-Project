@@ -1,7 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
 if [ $USERID -ne 0 ]; then
     echo "You should be root user to run this script"
     exit 1
@@ -9,18 +8,18 @@ else
     echo "you are a root user you can run this script"
 fi
 
-dnf list install mysql
+dnf list install nginx
 
 if [ $? -ne 0 ]; then 
-   
-    echo "mysql is not installed, installing now..."
-    dnf install mysql -y
-    if [ $? -eq 0 ]; then
-        echo "mysql installed successfully"
+    echo "Nginx is not installed, installing now..."
+    dnf install nginx -y
+
+if [ $? -eq 0 ]; then
+        echo "Nginx installed successfully"
     else
-        echo "Failed to install mysql"
+        echo "Failed to install Nginx"
         exit 1
     fi
 else
-    echo "mysql is already installed"
+    echo "Nginx is already installed"
 fi
