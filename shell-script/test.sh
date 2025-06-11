@@ -30,6 +30,9 @@ then
     dnf install nginx -y
 else    
     echo "installing mysql"
+else
+    echo "already installed mysql"
 
 fi
 
+echo "Installation comleted $
