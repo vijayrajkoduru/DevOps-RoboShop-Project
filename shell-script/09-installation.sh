@@ -9,18 +9,18 @@ else
     echo "you are a root user you can run this script"
 fi
 
-dnf list install nginx
+dnf list install mysql
 
 if [ $? -ne 0 ]; then 
    
-    echo "Nginx is not installed, installing now..."
-    dnf install nginx -y
+    echo "mysql is not installed, installing now..."
+    dnf install mysql -y
     if [ $? -eq 0 ]; then
-        echo "Nginx installed successfully"
+        echo "mysql installed successfully"
     else
-        echo "Failed to install Nginx"
+        echo "Failed to install mysql"
         exit 1
     fi
 else
-    echo "Nginx is already installed"
+    echo "mysql is already installed"
 fi
