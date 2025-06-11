@@ -1,5 +1,15 @@
 #!/bin/bash
 
+: << 'COMMENT'
+
+Rule of Thumb:
+
+if [ $? -eq 0 ] → "Is installed?" → Remove if true.
+
+if [ $? -ne 0 ] → "Not installed?" → Install if true.
+
+COMMENT
+
 USERID= $(id -u)
 
 
@@ -17,7 +27,7 @@ dnf install nginx -y
 
 if [ $? -ne 0 ]
 then 
-    echo "install the nginx now"
+    echo "install the nginx now"  : << 'COMMENT'
     dnf install nginx -y
     if [ $? -eq 0 ]
     then 
