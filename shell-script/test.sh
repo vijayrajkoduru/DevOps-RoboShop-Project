@@ -13,33 +13,18 @@ else
 
 fi
 
-dnf list remove mysql
-if [ $? -eq 0 ]
+dnf install nginx -y
+
+if [ $? -ne 0 ]
 then 
-    echo "mysql is not installed ...going to install"
-    dnf remove mysql -y
+    echo "install the nginx now"
+    dnf install nginx -y
     if [ $? -eq 0 ]
     then 
-        echo "removed failure "
+        echo "installing nginx"
+    else    
+        echo "failed to instll"
     fi
-
-else
-    echo "mysql removed installed"
-
-fi
-
-dnf list install nginx
-
-if [ $? -eq 0 ]
-then 
-    echo "nginx is not installed ...going to install"
-    dnf remove nginx -y
-    if [ $? -eq 0 ]
-    then 
-        echo "removed nginx"
-    fi
-
-else
-    echo "nginx removed installed"
-
+else    
+    echo "already installed"
 fi
