@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-if [$USERID -ne 0]
+if [ $USERID -ne 0 ]
 then 
     echo "you should be a root user"
     exit 1
@@ -24,3 +24,5 @@ then
         exit 1
     fi
 else
+    echo "nginx is already installed... Nothing to do"
+fi
