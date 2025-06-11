@@ -3,26 +3,27 @@
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
-then 
-    echo "you should be a root user"
-    exit 1
+then
+    echo "ERROR:: Please run this script with root access"
+    exit 1 
 else
-    echo "You are a root user"
+    echo "You are running with root access"
 fi
 
-dnf list install nginx
+dnf list installed nginx
+
 
 if [ $? -ne 0 ]
 then
-    echo "nginx is not installed and going to install it"
+    echo "nginx is not installed... going to install it"
     dnf install nginx -y
     if [ $? -eq 0 ]
-    then 
-        echo "nginx installing is ... SUCESS"
+    then
+        echo "Installing nginx is ... SUCCESS"
     else
-        echo "nginx installing is ... FAILURE"
+        echo "Installing nginx is ... FAILURE"
         exit 1
     fi
 else
-    echo "nginx is already installed... Nothing to do"
+    echo "nginx is already installed...Nothing to do"
 fi
