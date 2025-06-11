@@ -9,9 +9,10 @@ else
     echo "you are a root user you can run this script"
 fi
 
-dnf list install nginx -y
+dnf list install nginx
 
 if [ $? -ne 0 ]; then 
+   
     echo "Nginx is not installed, installing now..."
     dnf install nginx -y
     if [ $? -eq 0 ]; then
