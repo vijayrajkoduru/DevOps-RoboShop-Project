@@ -28,12 +28,20 @@ else
 fi
 
 
-dnf remove mysql -y
+dnf remove mysql
 
 if [ $? -eq 0 ]
 then 
     echo "removing mysql"
+    dnf remove mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "fail to remove"
+        exit 1
+    else
+            echo "mysql rmoved successfull"
+    fi
+
 else
-    echo "fail to remove"
-    exit 1
+    echo "mysql is not installed"
 fi
