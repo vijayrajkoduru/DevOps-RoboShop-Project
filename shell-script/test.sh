@@ -13,26 +13,19 @@ else
 
 fi
 
-dnf list install nginx
-if [ $? -eq 0 ]
-then 
-    echo "nginx is not installed ...going to install"
-    dnf install nginx -y
-else    
-    echo "installing nginx"
-
-fi
-
 dnf list install mysql
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then 
     echo "mysql is not installed ...going to install"
     dnf install nginx -y
-else    
-    echo "installing mysql"
+    if [ $? -eq 0 ]
+    then 
+        echo "installing mysql"
+    else
+        echo "already installed "
+    fi
+
 else
-    echo "already installed mysql"
+    echo "already installed
 
 fi
-
-echo "Installation comleted $
