@@ -31,8 +31,8 @@ dnf remove mysql -y
 
 if [ $? -eq 0 ]
 then 
-    echo "instlling mysql"
+    echo "removing mysql"
 else
-    echo "familed to install"
+    echo "fail to remove"
     exit 1
 fi
