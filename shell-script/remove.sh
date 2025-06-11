@@ -26,6 +26,7 @@ else
     echo "already removed"
 fi
 
+
 dnf remove mysql -y
 
 if [ $? -eq 0 ]

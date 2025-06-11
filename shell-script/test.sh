@@ -23,7 +23,7 @@ dnf install nginx -y
 
 if [ $? -ne 0 ]
 then 
-    echo "install the nginx now"  : << 'COMMENT'
+    echo "install the nginx now" 
     dnf install nginx -y
     if [ $? -eq 0 ]
     then 
