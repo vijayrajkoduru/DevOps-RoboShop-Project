@@ -2,29 +2,25 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
-then
-    echo "ERROR:: Please run this script with root access"
-    exit 1 #give other than 0 upto 127
+if [$USERID -ne 0]
+then 
+    echo "you should be a root user"
+    exit 1
 else
-    echo "You are running with root access"
+    echo "You are a root user"
 fi
 
-dnf list installed mysql
+dnf list install nginx
 
-# check already installed or not. if Installed $? is 0, then 
-# If not installed $? is not 0. expression is true
 if [ $? -ne 0 ]
 then
-    echo "MySQL is not installed... going to install it"
-    dnf install mysql -y
+    echo "nginx is not installed and going to install it"
+    dnf install nginx -y
     if [ $? -eq 0 ]
-    then
-        echo "Installing MySQL is ... SUCCESS"
+    then 
+        echo "nginx installing is ... SUCESS"
     else
-        echo "Installing MySQL is ... FAILURE"
+        echo "nginx installing is ... FAILURE"
         exit 1
     fi
 else
-    echo "MySQL is already installed...Nothing to do"
-fi
