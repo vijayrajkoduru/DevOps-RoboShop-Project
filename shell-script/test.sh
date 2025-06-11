@@ -14,7 +14,7 @@ else
 fi
 
 dnf list remove mysql
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then 
     echo "mysql is not installed ...going to install"
     dnf remove mysql -y
@@ -30,7 +30,7 @@ fi
 
 dnf list install nginx
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then 
     echo "nginx is not installed ...going to install"
     dnf remove nginx -y
