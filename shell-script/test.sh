@@ -20,9 +20,7 @@ then
     dnf remove mysql -y
     if [ $? -eq 0 ]
     then 
-        echo "installing mysql"
-    else
-        echo "installation failure "
+        echo "removed failure "
     fi
 
 else
@@ -38,9 +36,7 @@ then
     dnf remove nginx -y
     if [ $? -eq 0 ]
     then 
-        echo "installing nginx"
-    else
-       echo "installation failure "
+        echo "removed nginx"
     fi
 
 else
