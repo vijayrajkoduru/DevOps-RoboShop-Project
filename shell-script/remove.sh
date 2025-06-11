@@ -10,7 +10,7 @@ else
     echo "already you are running on root user"
 fi
 
-dnf lista remove nginx
+dnf list install nginx
 
 if [ $? -eq 0 ]
 then 
@@ -19,16 +19,16 @@ then
     if [$? -ne 0 ]
     then 
         echo "failed to remov nginx"
-    else
-        echo "nginx removing successfully"
         exit 1
+    else
+        echo "nginx removing successfully" 
     fi
 else
     echo "nginx is not installed"
 fi
 
 
-dnf remove mysql
+dnf list installed mysql
 
 if [ $? -eq 0 ]
 then 
