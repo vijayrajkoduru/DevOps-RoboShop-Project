@@ -1,4 +1,4 @@
-$!/bin/bash
+#S!/bin/bash
 
 NAME1="RoboShop"
 NAME2="DevOps"
