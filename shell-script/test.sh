@@ -1,13 +1,9 @@
 #!/bin/bash
 
 : << 'COMMENT'
-
 Rule of Thumb:
-
 if [ $? -eq 0 ] → "Is installed?" → Remove if true.
-
 if [ $? -ne 0 ] → "Not installed?" → Install if true.
-
 COMMENT
 
 USERID= $(id -u)
