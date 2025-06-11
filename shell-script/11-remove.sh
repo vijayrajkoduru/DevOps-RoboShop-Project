@@ -1,13 +1,10 @@
 #!/bin/bash
 
-USERID=$(id -u)
 
-if [USERID -ne o]
+if [ "$(id -u)" -ne o ]
 then 
     echo "please run as a root"
     exit 1
-else
-    echo "already you are running on root user"
 fi
 
 dnf list install nginx
