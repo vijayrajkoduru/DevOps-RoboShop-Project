@@ -26,6 +26,6 @@ then
     fi
 
 else
-    echo "already installed
+    echo "already installed"
 
 fi
