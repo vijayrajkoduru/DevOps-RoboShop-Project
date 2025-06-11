@@ -5,6 +5,7 @@ USERID=$(id -u)
 if [USERID -ne o]
 then 
     echo "please run as a root"
+    exit 1
 else
     echo "already you are running on root user"
 fi
@@ -13,17 +14,17 @@ dnf lista remove nginx
 
 if [ $? -eq 0 ]
 then 
-    echo "nginx exist"
+    echo "nginx is installed removing "
     dnf remove nginx -y
     if [$? -ne 0 ]
     then 
-        echo "removing the nginx"
+        echo "failed to remov nginx"
     else
-        echo "removing failed"
+        echo "nginx removing successfully"
         exit 1
     fi
 else
-    echo "already removed"
+    echo "nginx is not installed"
 fi
 
 
