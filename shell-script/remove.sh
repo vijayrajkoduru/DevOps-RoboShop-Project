@@ -16,7 +16,7 @@ VALIDATE(){
     then 
         echo -e " $G UNINSTALLING mysql $2-----$N"
     else
-        echo -e " $R removing FAILED mysql $2-----$N"
+        echo -e " $R REMOVED $2-----$N"
     fi
 }
 
