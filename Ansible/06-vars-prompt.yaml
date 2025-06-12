@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars_files:
-  - name: username
+  - name: USERNAME
     prompt: please enter your name
     private: true
 
-  - name: password
+  - name: PASSWORD
     prompt: please enter your password
     private: true
   tasks:
   - name: printing user information
     ansible.builtin.debug:
-      msg: "hellow username id: {{ username}}, password is: {{password}}"
+      msg: "hello username is: {{ USERNAME }}, password is: {{ PASSWORD  }}"
