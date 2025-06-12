@@ -12,7 +12,7 @@ then
 fi
 
 VALIDATE(){
-    if [ $1 -eq 0 ]
+    if [ $1 -ne 0 ]
     then 
         echo -e " $G installing the mysql $2-----$N"
     else
@@ -21,7 +21,7 @@ VALIDATE(){
 }
 
 dnf list installed mysql
-    if [ $? -ne -0 ]
+    if [ $? -eq -0 ]
     then 
         echo -e "$R mysql inst not instlled ....goint to install it  $N"
         dnf remove mysql -y
