@@ -1,7 +1,7 @@
-- name: variables from files
+- name: variables from prompt
   hosts: local
   connection: local
-  vars_files:
+  vars_prompt:
   - name: USERNAME
     prompt: please enter your name
     private: true
