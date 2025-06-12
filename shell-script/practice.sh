@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[0m"
 
 if ["$(id -u)" -ne 0]; then
-    echo -e "${R}you are not a root user ${N}"
+    echo -e "$R you are not a root user ${N}"
     exit 1
 fi
 
