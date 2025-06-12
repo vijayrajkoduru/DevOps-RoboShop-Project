@@ -12,12 +12,12 @@ then
 fi
 
 VALIDATE(){
-
     if [ $1 -eq 0 ]
     then 
         echo -e " $G installing the mysql $2-----$N"
     else
         echo -e " $R installing the mysql $2-----$N"
+    fi
 }
 
 dnf list installed mysql
