@@ -28,5 +28,5 @@ dnf list installed mysql
         VALIDATE $? "mysql"
      
     else    
-        -e "$R already installed $N"
+        echo -e "$R already installed $N"
     fi
