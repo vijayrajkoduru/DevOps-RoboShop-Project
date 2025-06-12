@@ -46,3 +46,5 @@ done
 
 # Additional configuration can go here
 echo -e "${G}All packages installed successfully${N}"
+
+echo -e "${G}All packages installed successfully${N}"
