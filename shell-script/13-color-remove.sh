@@ -56,7 +56,7 @@ remove_package() {
 }
 
 # Main removal process
-packages=("mysql" "python3" "nginx" "git" "httpd")  # Packages to attempt removing
+packages=("mysql" "python3" "nginx" "httpd")  # Packages to attempt removing
 
 echo -e "\n${Y}=== Package Removal Process ===${N}"
 for pkg in "${packages[@]}"; do
