@@ -11,11 +11,11 @@ if ["$(id -u)" -ne 0]; then
 fi
 
 VALIDATE(){
-
-    if [ "$1" -eq 0 ];then
-        echo -e "${G} Installing $2 is on process ${N}"
+    if [ "$1" -eq 0 ]
+    then
+        echo -e "$G Installing $2 is on process $N"
     else
-        echo -e "${R}Installing $2 is FAILED ${n}"
+        echo -e "$R Installing $2 is FAILED $n"
         exit 1
     fi
 }
