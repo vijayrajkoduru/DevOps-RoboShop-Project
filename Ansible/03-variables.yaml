@@ -10,3 +10,6 @@
     ansible.builtin.debug:
       msg: "hellow anisble, {{course}}, duration: 10HR. Trainer is vijaykumar"
 
+  - name: print course information 
+    ansible.builtin.debug:
+      msg: "hellow anisble, {{course}}, duration: 10HR. Trainer is vijaykumar"
