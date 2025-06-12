@@ -38,7 +38,7 @@ install_package() {
 }
 
 # Main installation process
-packages=("mysql" "python3" "nginx" "git")  # Add more packages as needed
+packages=("mysql" "python3" "nginx" "git" "httpd")  # Add more packages as needed
 
 for pkg in "${packages[@]}"; do
     install_package "$pkg"
