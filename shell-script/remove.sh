@@ -14,9 +14,9 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo -e " $G installing the mysql $2-----$N"
+        echo -e " $G UNINSTALLING mysql $2-----$N"
     else
-        echo -e " $R installing the mysql $2-----$N"
+        echo -e " $R removing FAILED mysql $2-----$N"
     fi
 }
 
