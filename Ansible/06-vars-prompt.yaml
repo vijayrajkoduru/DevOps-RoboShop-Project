@@ -1,0 +1,15 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars_files:
+  - name: username
+    prompt: please enter your name
+    private: true
+
+  - name: password
+    prompt: please enter your password
+    private: true
+  tasks:
+  - name: printing user information
+    ansible.builtin.debug:
+      msg: "hellow username id: {{ username}}, password is: {{password}}"
