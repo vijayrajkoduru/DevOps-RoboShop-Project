@@ -1,12 +1,15 @@
 - name: play level variables
   hosts: local
   connection: local
+
   vars:
     COURSE: DevOps wit aws # equal to course=ansible in shell
     DURATION: 10HR
     tRAINER: vijaukumar
+
   tasks:
   - name: print course information 
+  
     vars:
       course: Ansible
     ansible.builtin.debug:
